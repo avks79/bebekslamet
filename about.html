@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+
+<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+<style>
+
+/* =========================
+   BACKGROUND
+========================= */
+body {
+  margin: 0;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+
+  /* background image + overlay gelap */
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1505842465776-3ac1f82c8a06');
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+.login-container {
+  text-align: center;
+  color: white;
+}
+
+/* TITLE */
+.login-container h1 {
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   CARD
+========================= */
+.login-box {
+  background: #f2f2f2;
+  padding: 40px;
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* =========================
+   INPUT
+========================= */
+.input-group {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px 10px;
+  padding-left: 25px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+}
+
+/* ICON */
+.input-group span {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  color: #999;
+  font-size: 14px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.login-btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+
+  /* gradient ungu pink */
+  background: linear-gradient(90deg, #7b2ff7, #f107a3);
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  opacity: 0.85;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="login-container">
+
+  <!-- TITLE -->
+  <h1>ACCOUNT LOGIN</h1>
+
+  <!-- CARD -->
+  <div class="login-box">
+
+    <!-- FORM BARU -->
+    <form action="login.php" method="POST">
+
+      <!-- EMAIL -->
+      <div class="input-group">
+        <span>👤</span>
+        <input type="email" name="email" placeholder="Email" required>
+      </div>
+
+      <!-- PASSWORD -->
+      <div class="input-group">
+        <span>🔒</span>
+        <input type="password" name="password" placeholder="Password" required>
+      </div>
+
+      <!-- BUTTON -->
+      <button type="submit" class="login-btn">LOGIN</button>
+
+    </form>
+
+  </div>
+</div>
+
+</body>
+</html>
